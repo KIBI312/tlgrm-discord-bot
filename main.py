@@ -13,7 +13,7 @@ with open('./config.json', 'r') as f:
     logging.debug('Config file loaded')
 
 telegram_client = TelegramClient("Client", config["telegram_api_id"], config["telegram_api_hash"], connection_retries = sys.maxsize, retry_delay = 10, auto_reconnect = True, timeout = 10)
-telegram_client.start(bot_token="994686549:AAFnHc7lXVh83JOACiFCDzeaQe7EdBnk2aU")
+telegram_client.start()
 
 discord_client = discord.Client()
 
